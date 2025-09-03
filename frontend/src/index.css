@@ -1,0 +1,228 @@
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Login Component Styles */
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.login-left {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;   /* aligns content to the top vertically */
+  justify-content: flex-start; /* aligns content to the left horizontally */
+  padding: 20px;
+  background: white;
+}
+
+
+.login-content {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+}
+
+.app-brand {
+  color: #00C2F9;
+  font-weight: 800;
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.welcome-text {
+    margin-top: 25%;
+}
+
+.welcome-text h2 {
+  color: #2D3748;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.welcome-text p {
+  color: #718096;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.login-content .form-control {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #E2E8F0;
+  transition: all 0.3s;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-content .form-control:focus {
+  border-color: #00C2F9;
+  box-shadow: 0 0 0 3px rgba(0, 194, 249, 0.2);
+  outline: none;
+}
+
+.btn-login {
+  background: #00C2F9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 40%;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.btn-login:hover {
+  background: #00B0E0;
+  transform: translateY(-2px);
+}
+
+.btn-login:disabled {
+  background: #90cdf4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: left;
+  color: #718096;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #00C2F9;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.login-right {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Register Component Styles */
+.register-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.register-left {
+  flex: 1;
+  background: url('/assets/images/reg-bg.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.register-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+   background: white;
+}
+
+.register-card {
+  padding: 30px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.welcome-text-register h2 {
+  color: #2D3748;
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 8px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.btn-register {
+  background: #00C2F9;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  width: 40% !important;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.btn-register:hover {
+  background: #00B0E0;
+  transform: translateY(-2px);
+}
+
+.btn-register:disabled {
+  background: #90cdf4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  .register-left {
+    height: 200px;
+  }
+  .register-right {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .login-container {
+    flex-direction: column;
+  }
+  
+  .login-right {
+    display: none;
+  }
+  
+  .login-left {
+    padding: 40px 20px;
+  }
+}
+
+.alert-danger {
+  background-color: #fed7d7;
+  color: #c53030;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f56565;
+}
